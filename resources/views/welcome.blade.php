@@ -3,7 +3,7 @@
 @section('title', 'FEPESE Inscrição')
 
 @section('content')
-    <div id="events-container" class="col-md-12">
+    <div id="registrations-container" class="col-md-12">
 
         <h2>Concursos Públicos</h2>
 

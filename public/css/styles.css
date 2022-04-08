@@ -1,0 +1,86 @@
+/* General */
+
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header {
+    background-color: #f4f7f9;
+    border-bottom: 10px solid #008aa6;
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/* navbar */
+#navbar {
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-right: 20px;
+}
+
+#navbar a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #004066;
+}
+
+#navbar a:hover {
+    color: #00588b;
+}
+
+#navbar img {
+    width: 271px;
+    margin-left: 20px;
+}
+
+/* Registration create page */
+#registrations-container {
+    padding: 50px;
+}
+
+#registration-create-container {
+    padding: 30px;
+}
+
+#registration-create-container h1{
+    margin: 20px 0 40px 0;
+}
+
+#registration-create-container label {
+    font-weight: bold;
+}
+
+#registration-create-container input,
+#registration-create-container select {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    background-color: #004066;
+    border-top: 10px solid #008aa6;
+    color: #FFF;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
