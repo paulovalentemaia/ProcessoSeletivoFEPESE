@@ -25,3 +25,5 @@ Route::get('/inscricao/search', function () {
     return view('inscricao.search');
 });
 
+
+Route::get('/estado', '\App\Http\Controllers\EstadoController@index');
