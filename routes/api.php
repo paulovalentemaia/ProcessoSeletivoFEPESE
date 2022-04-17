@@ -33,6 +33,6 @@ $router->group(
 		//Fazer rota get estado
         $router->post('/estado', 'App\Http\Controllers\EstadoController@store');
         $router->patch('/estado/{id}', '\App\Http\Controllers\EstadoController@update');
-        $router->patch('/estado/deletar/{id}', '\App\Http\Controllers\EstadoController@destroy');
+        $router->delete('/estado/{id}', '\App\Http\Controllers\EstadoController@destroy');
     }
 );

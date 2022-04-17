@@ -26,12 +26,7 @@
                         <a href="/estado/editar/{{$estado->estado_id}}" class="btn btn-info">Editar</a>
                     </td>
                     <td>
-                        <form action="{{url('/api/estado/deletar')}}/{{$estado->estado_id}}" method="post" id="estado-delete">
-                            @csrf
-                            @method('patch')
-                            <button class="btn btn-danger">Deletar</button>
-                        </form>
-
+                        <a href="javascript:void(0)" onclick="deleteForm({{$estado->estado_id}})" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             @endforeach

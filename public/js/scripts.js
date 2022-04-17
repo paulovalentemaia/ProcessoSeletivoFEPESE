@@ -26,25 +26,25 @@ $(function () {
             }
         })
     });
+
+
 });
 
 //Estado Delete
-$(function (){
-    $("#estado-delete").on('submit', function (e) {
-        e.preventDefault();
+function deleteForm(id) {
+    if (confirm("Tem certeza que deseja deletar o estado?")) {
         $.ajax({
-            url: $(this).attr('action'),
-            method: $(this).attr('method'),
-            data: new FormData(this),
-            processData: false,
-            dataType: 'json',
-
-            success: function (data) {
-                $('#estado-delete')[0].reset();
-
+            //console.log(id);
+            url: '/api/estado/' + id,
+            type: 'DELETE',
+            data: {
+                _token: $("input[name=_token]").val()
+            },
+            success:function (response)
+            {
+                $("#sid"+id).remove();
                 window.location.href = "/estado";
-                alert(data.message);
-            }
-        })
-    });
-});
+            },
+        });
+    }
+}
