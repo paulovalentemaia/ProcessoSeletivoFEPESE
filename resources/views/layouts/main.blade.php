@@ -12,10 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 
     <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- CSS da App   -->
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/scripts.js"></script>
 </head>
 <body>
 <header>
@@ -30,6 +31,12 @@
                 </li>
                 <li class="nav-item">
                     <a href="/inscricao/search" class="nav-link">Imprimir Inscrição</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/estado" class="nav-link">Exibir Estados</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/estado/cadastrar" class="nav-link">Cadastrar Estados</a>
                 </li>
             </ul>
         </div>
@@ -49,7 +56,10 @@
 <footer>
     <p>FEPESE - Fundação de Estudos e Pesquisas Socioeconômicos {{@date('Y')}} &copy; Todos os direitos reservados.</p>
 </footer>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{{-- JS da App --}}
+<script src="/js/scripts.js"></script>
+{{--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>--}}
+{{--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>--}}
 </body>
 </html>
