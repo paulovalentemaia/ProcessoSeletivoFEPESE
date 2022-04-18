@@ -44,9 +44,8 @@ class PessoaFisicaController extends Controller
             $pessoa->cidade_id = $request->cidade_id;
             $pessoa->estado_id = $request->estado_id;
 
-            $isInscrito = PessoaFisica::where('cpf', $pessoa->cpf)->select('id')->first()->id;
-
-            if ($isInscrito){
+            if (PessoaFisica::where('cpf', $pessoa->cpf)->first()){
+                $isInscrito = PessoaFisica::where('cpf', $pessoa->cpf)->select('id')->first()->id;
                 $inscrito = Inscricao::where('pessoa_fisica_id', $isInscrito)->select('id')->first()->id;
 
                 return response()->json([

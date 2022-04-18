@@ -55,7 +55,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="nome"> Cidade</label>
-                    <input type="text" class="form-control" value="{{ $pessoa['estado_id'] }}" disabled="disabled">
+                    <input type="text" class="form-control" value="{{ $pessoa['cidade_id'] }}" disabled="disabled">
                 </div>
             </div>
             <div class="col-md-4">

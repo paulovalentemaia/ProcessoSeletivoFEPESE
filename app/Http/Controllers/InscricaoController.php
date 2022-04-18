@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cidade;
 use App\Models\Estado;
 use App\Models\PessoaFisica;
 use Illuminate\Http\Request;
@@ -30,6 +31,7 @@ class InscricaoController extends Controller
         $pessoa = PessoaFisica::where('id', $inscricao->pessoa_fisica_id)->first()->toArray();
 
         $pessoa['estado_id'] = Estado::where('estado_id', $pessoa['estado_id'])->select('nome')->first()->nome;
+        $pessoa['cidade_id'] = Cidade::where('cidade_id', $pessoa['cidade_id'])->select('nome')->first()->nome;
 
         return view('inscricao.comprovante', ['inscricao' => $inscricao, 'pessoa' => $pessoa]);
     }
