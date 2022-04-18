@@ -1,5 +1,35 @@
 //Formulário Estado
 $(function () {
+    $("#inscricao-form").on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: $(this).attr('action'),
+            method: $(this).attr('method'),
+            data: new FormData(this),
+            processData: false,
+            dataType: 'json',
+            contentType: false,
+            beforeSend: function () {
+                $(document).find('span.error-text').text('');
+            },
+            success: function (data) {
+                if (data.status == false) {
+                    $.each(data.message, function (prefix, val) {
+                        $('span.' + prefix + '-error').text(val[0]);
+                    });
+                } else {
+                    $('#inscricao-form')[0].reset();
+
+                    window.location.href = "/inscricao/comprovante/"+data.inscricao;
+                    alert(data.message);
+                }
+            }
+        })
+    });
+});
+
+//Formulário Estado
+$(function () {
     $("#estado-form").on('submit', function (e) {
         e.preventDefault();
         $.ajax({
@@ -26,8 +56,6 @@ $(function () {
             }
         })
     });
-
-
 });
 
 //Estado Delete

@@ -27,10 +27,10 @@
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="/inscricao/create" class="nav-link">Realizar Inscrição</a>
+                    <a href="/inscricao/formulario" class="nav-link">Realizar Inscrição</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/inscricao/search" class="nav-link">Imprimir Inscrição</a>
+                    <a href="/inscricao/pesquisar" class="nav-link">Imprimir Inscrição</a>
                 </li>
                 <li class="nav-item">
                     <a href="/estado" class="nav-link">Exibir Estados</a>

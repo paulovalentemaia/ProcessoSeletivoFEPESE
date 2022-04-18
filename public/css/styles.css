@@ -54,7 +54,7 @@ header {
     padding: 30px;
 }
 
-#registration-create-container h1{
+#registration-create-container h1 {
     margin: 20px 0 40px 0;
 }
 
@@ -84,3 +84,25 @@ footer p {
     margin-bottom: 0;
 }
 
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+    button {
+        visibility: hidden;
+    }
+}

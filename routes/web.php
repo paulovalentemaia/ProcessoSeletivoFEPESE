@@ -17,13 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inscricao/create', function () {
-    return view('inscricao.create');
-});
-
-Route::get('/inscricao/search', function () {
-    return view('inscricao.search');
-});
+Route::get('/inscricao/pesquisar', '\App\Http\Controllers\InscricaoController@pesquisar');
+Route::get('/inscricao/formulario', '\App\Http\Controllers\InscricaoController@formulario');
+Route::get('/inscricao/comprovante/{id}', '\App\Http\Controllers\InscricaoController@comprovante');
 
 Route::get('/estado/cadastrar', '\App\Http\Controllers\EstadoController@cadastrar');
 Route::get('/estado', '\App\Http\Controllers\EstadoController@index');

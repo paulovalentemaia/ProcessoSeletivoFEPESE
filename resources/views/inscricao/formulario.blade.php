@@ -5,13 +5,14 @@
 @section('content')
     <div id="registration-create-container" class="col-md-10 offset-md-1">
         <h1>Inscrição do Candidato</h1>
-        <form action="/" method="post">
+        <form action="{{url('/api/pessoa_fisica')}}" method="post" id="inscricao-form">
             @csrf
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="nome">* Nome Completo</label>
                         <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo">
+                        <span class="text-danger error-text nome-error"></span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -19,6 +20,7 @@
                         <!-- Mascarar CPF JS e validar no Front e no Back (LaravelLegends)  -->
                         <label for="cpf">* CPF</label>
                         <input type="text" class="form-control" id="cpf" name="cpf" placeholder="00000000000">
+                        <span class="text-danger error-text cpf-error"></span>
                     </div>
                 </div>
             </div>
@@ -28,6 +30,7 @@
                     <div class="form-group">
                         <label for="endereco">* Endereço</label>
                         <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua, número">
+                        <span class="text-danger error-text endereco-error"></span>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -60,11 +63,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="endereco">* Cargo</label>
-                        <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua, número">
+                        <input type="text" class="form-control" id="cargo" name="cargo" value="Desenvolvedor Mobile">
+                        <span class="text-danger error-text cargo-error"></span>
                     </div>
                 </div>
             </div>
-            <input type="submit" class="btn btn-primary" value="Salvar Inscrição">
+            <button type="submit" class="btn btn-block btn-primary">
+                Salvar Inscrição
+            </button>
         </form>
     </div>
 
